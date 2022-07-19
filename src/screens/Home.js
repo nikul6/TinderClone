@@ -49,7 +49,7 @@ export default function Home() {
     if (!profiles[cardIndex]) return;
 
     const userSwiped = profiles[cardIndex];
-    console.log("swipe left ", userSwiped.displayName);
+    // console.log("swipe left ", userSwiped.displayName);
     setDoc(doc(db, 'users', user.uid, 'passes', userSwiped.id), userSwiped)
   }
 
@@ -77,7 +77,7 @@ export default function Home() {
           userSwiped
         });
       } else {
-        console.log("swipe right ", userSwiped.displayName);
+        // console.log("swipe right ", userSwiped.displayName);
 
         setDoc(doc(db, 'users', user.uid, 'swipes', userSwiped.id), userSwiped);
       }
